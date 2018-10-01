@@ -1,7 +1,7 @@
 # lab-03
 # Jeremiah Vaskis
 
-[NOTE: Below question 8 is the output of the C++ file]
+[NOTE: Below question 8 is the output of the C++ file, also the format and indents are not screwed up in the attached .txt version of this document]
 
 1&2)	I can compare the next calculated value to the previous.
 	If the next value is less than the previous then I know an overflow has occured.
