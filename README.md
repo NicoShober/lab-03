@@ -1,7 +1,8 @@
 # lab-03
 # Jeremiah Vaskis
 
-1 & 2)	I can compare the next calculated value to the previous.
+1 & 2)	
+	I can compare the next calculated value to the previous.
 	If the next value is less than the previous then I know an overflow has occured.
 	Overflows are caused by going beyond the limits of a particular type's range of values.
 	When this occurs it "wraps around" to the other extreme of its range and continues on (which usually means garbage 			outputs).
