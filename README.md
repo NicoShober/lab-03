@@ -1,10 +1,36 @@
 # lab-03
+# Jeremiah Vaskis
 
 1 & 2)	I can compare the next calculated value to the previous.
 	If the next value is less than the previous then I know an overflow has occured.
 	Overflows are caused by going beyond the limits of a particular type's range of values.
-	When this occurs it "wraps around" to the other extreme of its range and continues on (which usually means garbage outputs).
+	When this occurs it "wraps around" to the other extreme of its range and continues on (which usually means garbage 			outputs).
 	n = 256 causes an overflow
+ 
+3) 	n = 65536 causes an overflow
+
+4) 	I did what I did in problem 1 & 2.
+	I check if the next value is greater than the previous to detect if a "wrap around" has occured.
+	n = 35 causes an overflow
+
+5)	n = 171 causes an overflow 
+
+6)	The expected value is 0 as the formula simplifies to:
+	[[n*(1/n)]-1] = [(n/n)-1] = [(1)-1] = 0
+	
+	For using float numbers it appears to be accurate until n = 10
+	For using double numbers it appears to be accurate until n = 6
+	
+	I suspect that this is due to the fact that when dividing floats or doubles the quotient is not going to be perfect but either 		rounded or truncated.
+	Due to this over time the errors will add up and the function will be adding fractions that are ever so slightly more or less 		than its true mathmatical value.
+	This can be seen by looking at the results:
+		The float is adding fractions that are ever so slightly larger than the true mathematical fraction as the answer is a 			number barely over zero ([1 + small amounts] - 1 = (+) small amount).
+		The double is adding fractions that are ever so slightly smaller than the true mathematical fraction as the answer is a 		number barely over zero ([1 - small amounts] - 1 = (-) small amount).
+
+7)	Float values are not exact but have trailing decimal values which for this case meant the final increment was indeed < 4.4, but 	without the "setprecision" function showing the trailing decimal points the console would normally "visually-raound" the value 		to 4.4 when it was technically less than 4.4
+
+8)	The issue is the same as problem 7 (trailing decimal values) but the effect is that now the final increment is > to 4.4 and thus	it does not display the simplified "visually-rounded" console output of 4.4
+
 ______________________________
 Problem 1 & 2
 ______________________________
@@ -17,8 +43,6 @@ ______________________________
   n =        260
   sumShort:  -32640
 
-  
-3) n = 65536 causes an overflow
 ______________________________
 Problem 3
 ______________________________
@@ -31,10 +55,6 @@ ______________________________
   n =        65540
   sumLong:   -2147450880
 
-
-4) 	I did what I did in problem 1 & 2.
-	I check if the next value is greater than the previous to detect if a "wrap around" has occured.
-	n = 35 causes an overflow
 ______________________________
 Problem 4
 ______________________________
@@ -47,8 +67,6 @@ ______________________________
   n =      40
   productLong: inf
 
-  
-5)	n = 171 causes an overflow 
 ______________________________
 Problem 5
 ______________________________
@@ -60,19 +78,6 @@ ______________________________
 
   n =            175
   productDouble: inf
-
-
-6)	The expected value is 0 as the formula simplifies to:
-	[[n*(1/n)]-1] = [(n/n)-1] = [(1)-1] = 0
-	
-	For using float numbers it appears to be accurate until n = 10
-	For using double numbers it appears to be accurate until n = 6
-	
-	I suspect that this is due to the fact that when dividing floats or doubles the quotient is not going to be perfect but either rounded or truncated.
-	Due to this over time the errors will add up and the function will be adding fractions that are ever so slightly more or less than its true mathmatical value.
-	This can be seen by looking at the results:
-		The float is adding fractions that are ever so slightly larger than the true mathematical fraction as the answer is a number barely over zero ([1 + small amounts] - 1 = (+) small amount).
-		The double is adding fractions that are ever so slightly smaller than the true mathematical fraction as the answer is a number barely over zero ([1 - small amounts] - 1 = (-) small amount).
 
 ______________________________
 Problem 6
@@ -93,9 +98,6 @@ ______________________________
   1/n =          0.166667
   sumFracDouble: -1.11022e-16
 
-
-7)	Float values are not exact but have trailing decimal values which for this case meant the final increment was indeed < 4.4, but without the "setprecision" function showing the trailing decimal points the console would normally "visually-raound" the value to 4.4 when it was technically less than 4.4
-
 ______________________________
 Problem 7
 ______________________________
@@ -107,8 +109,6 @@ i = 4
 i = 4.199999809
 i = 4.399999619
 
-
-8)	The issue is the same as problem 7 (trailing decimal values) but the effect is that now the final increment is > to 4.4 and thus it does not display the simplified "visually-rounded" console output of 4.4
 ______________________________
 Problem 8
 ______________________________
