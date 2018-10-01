@@ -1,6 +1,8 @@
 # lab-03
 # Jeremiah Vaskis
 
+[NOTE: Below question 8 is the output of the C++ file]
+
 1&2)	I can compare the next calculated value to the previous.
 	If the next value is less than the previous then I know an overflow has occured.
 	Overflows are caused by going beyond the limits of a particular type's range of values.
